@@ -1,0 +1,44 @@
+.container__rating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 460px;
+    height: 540px;
+    border: 1px white solid;
+    border-radius: 25px;
+}
+
+.container__rating ul li:last-child {
+    border-bottom: none;
+}
+
+.text {
+    color: white;
+    padding: 13px 0 13px 0;
+    font-size: 26px;
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+.container__athlete {
+    display: flex;
+    width: 405px;
+    justify-content: space-between;
+    color: #FFF;
+    font-family: Yanone Kaffeesatz, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 45px; /* 173.077% */
+    letter-spacing: 1px;
+    border-bottom: 1px solid white;
+}
+
+.index{
+    width: 30px;
+}
+
+.fullName {
+    width: 200px;
+}
+

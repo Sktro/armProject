@@ -1,0 +1,7 @@
+.container__tournamentsResults {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 50px;
+}

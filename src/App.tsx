@@ -1,26 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Header} from "./components/Layout/header/Header";
+import {MainContent} from "./components/mainContent/MainContent";
+import {Coaches} from "./components/Coaсhes/Coaches";
+import {Rating} from "./components/Rating/Rating";
+import {Tournaments} from "./components/Tournaments/Tournaments";
+import {TournamentResults} from "./components/TournamentResults/TournamentResults";
+import {Routes, Route} from "react-router-dom";
+import {NotFoundPage} from "./components/NotFoundPage/NotFoundPage";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Header/>
+            <Routes>
+                <Route path='/' element={<MainContent/>}/>
+                <Route path='/rating' element={<Rating/>}/>
+                <Route path='/tournaments' element={<Tournaments/>}/>
+                <Route path='/coaches' element={<Coaches/>}/>
+                <Route path='/tournamentResults' element={<TournamentResults/>}/>
+                <Route path={'*'} element={<NotFoundPage/>}/>
+            </Routes>
+
+        </>
+    );
 }
 
 export default App;

@@ -1,0 +1,49 @@
+.content {
+    padding: 138px 100px 134px 88px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text1 {
+    color: #FFF;
+    text-align: center;
+    font-family: Yanone Kaffeesatz, sans-serif;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px; /* 70.313% */
+    letter-spacing: 1px;
+}
+
+.text2 {
+    color: #FFF;
+    text-align: center;
+    font-family: Yanone Kaffeesatz, sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 45px;
+    letter-spacing: 1px;
+}
+
+.container__button {
+    padding: 10px 0 45px 0;
+}
+
+.buttons button {
+    padding: 16px;
+
+}
+
+/*
+.buttons button {
+    color: #000;
+    font-family:  'Source sans 3', sans-serif;
+    font-size: 14px;
+    line-height: 100%;
+    letter-spacing: 1.3px;
+    background-color: white;
+    padding: 18px 36px;
+    border-bottom-right-radius: 10px;
+}*/
