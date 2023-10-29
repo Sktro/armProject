@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.41cbf66a.css",
-    "main.js": "/static/js/main.2e06d6d9.js",
-    "static/js/787.80d6ba6c.chunk.js": "/static/js/787.80d6ba6c.chunk.js",
-    "static/media/kazakhstan.svg": "/static/media/kazakhstan.9a3558b52d5b8d5e00cc0c24ed3b498f.svg",
-    "static/media/united_states.svg": "/static/media/united_states.ee8e463943959c4066ca8c3dbb58a7d5.svg",
-    "static/media/logo.svg": "/static/media/logo.6d3535e74ad02de75e44c791085ccda0.svg",
-    "static/media/georgia_.svg": "/static/media/georgia_.0adf73db027c0ee3466d602187730257.svg",
-    "static/media/armenia.svg": "/static/media/armenia.ecd74e0667e9d6f5517ae81e4bcc2b7f.svg",
-    "static/media/russian_federation.svg": "/static/media/russian_federation.d5aebcb9cec153c0c4fcabec80a78f31.svg",
-    "static/media/canada_.svg": "/static/media/canada_.7dcac7c1027cbce6347f3d7ed414591c.svg",
-    "static/media/sweden.svg": "/static/media/sweden.ed112ce22a480789294e27fc08ffda61.svg",
-    "static/media/ukraine.svg": "/static/media/ukraine.aa534ab806b376704e594aa97e464d44.svg",
-    "index.html": "/index.html",
-    "main.41cbf66a.css.map": "/static/css/main.41cbf66a.css.map",
-    "main.2e06d6d9.js.map": "/static/js/main.2e06d6d9.js.map",
-    "787.80d6ba6c.chunk.js.map": "/static/js/787.80d6ba6c.chunk.js.map"
+    "main.css": "/armProject/static/css/main.41cbf66a.css",
+    "main.js": "/armProject/static/js/main.9a5c9423.js",
+    "static/js/787.80d6ba6c.chunk.js": "/armProject/static/js/787.80d6ba6c.chunk.js",
+    "static/media/kazakhstan.svg": "/armProject/static/media/kazakhstan.9a3558b52d5b8d5e00cc0c24ed3b498f.svg",
+    "static/media/united_states.svg": "/armProject/static/media/united_states.ee8e463943959c4066ca8c3dbb58a7d5.svg",
+    "static/media/logo.svg": "/armProject/static/media/logo.6d3535e74ad02de75e44c791085ccda0.svg",
+    "static/media/georgia_.svg": "/armProject/static/media/georgia_.0adf73db027c0ee3466d602187730257.svg",
+    "static/media/armenia.svg": "/armProject/static/media/armenia.ecd74e0667e9d6f5517ae81e4bcc2b7f.svg",
+    "static/media/russian_federation.svg": "/armProject/static/media/russian_federation.d5aebcb9cec153c0c4fcabec80a78f31.svg",
+    "static/media/canada_.svg": "/armProject/static/media/canada_.7dcac7c1027cbce6347f3d7ed414591c.svg",
+    "static/media/sweden.svg": "/armProject/static/media/sweden.ed112ce22a480789294e27fc08ffda61.svg",
+    "static/media/ukraine.svg": "/armProject/static/media/ukraine.aa534ab806b376704e594aa97e464d44.svg",
+    "index.html": "/armProject/index.html",
+    "main.41cbf66a.css.map": "/armProject/static/css/main.41cbf66a.css.map",
+    "main.9a5c9423.js.map": "/armProject/static/js/main.9a5c9423.js.map",
+    "787.80d6ba6c.chunk.js.map": "/armProject/static/js/787.80d6ba6c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.41cbf66a.css",
-    "static/js/main.2e06d6d9.js"
+    "static/js/main.9a5c9423.js"
   ]
 }
