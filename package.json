@@ -1,5 +1,6 @@
 {
   "name": "projectarm",
+  "homepage": "https://sktro.github.io/armProject",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
