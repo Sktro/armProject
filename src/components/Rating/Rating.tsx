@@ -4,7 +4,7 @@ import styleRate from './Rating.module.css'
 export const Rating = () => {
     return(
         <div className='container'>
-            <div className={styleRate.container__rating}>РЕЙТИНГ</div>
+            <div className={styleRate.container__rating}>РЕЙТИНГИ</div>
         </div>
     )
 }

@@ -1,0 +1,8 @@
+.input__container {
+    width: 300px;
+}
+
+.form__container {
+    display: flex;
+    justify-content: space-between;
+}

@@ -17,7 +17,7 @@ const StyledNavLink = styled(NavLink)`
 
   &.active {
     font-weight: bold;
-    color: white; /* Примените свои стили здесь */
+    color: white;
   }
 `;
 
@@ -47,10 +47,9 @@ export const Header = () => {
                         </div>
                         <div className={stylesH.header__nav}>
                             <StyledNavLink to='/'>Как это работает?</StyledNavLink>
-                            <StyledNavLink to='/rating'>Рейтинг</StyledNavLink>
-                            <StyledNavLink to='/tournaments'>Турниры</StyledNavLink>
-                            <StyledNavLink to='/coaches'>Тренера</StyledNavLink>
-                            <StyledNavLink to='/tournamentResults'>Результаты соревнований</StyledNavLink>
+                            <StyledNavLink to='rating'>Рейтинги</StyledNavLink>
+                            <StyledNavLink to='tournaments'>Турниры</StyledNavLink>
+                            <StyledNavLink to='coaches'>Тренера</StyledNavLink>
                             <span>|</span>
                             <Space wrap>
                                 <Select
