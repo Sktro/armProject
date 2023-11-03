@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import styleAn from './Announcements.module.css'
 import {Button} from 'antd';
 import {PlusCircleOutlined} from "@ant-design/icons";
@@ -6,14 +6,18 @@ import {FormAnnouncement} from "./FormAnnouncement/FormAnnouncement";
 
 
 export const Announcements = () => {
-    return(
+    const [createAnnouncements, setCreateAnnouncements] = useState<boolean>(true)
+    return (
         <div className={styleAn.announcements__container}>
             <div className={styleAn.create__announcement}>
-                <Button type="link" icon={<PlusCircleOutlined />} size={'large'}>
+                {createAnnouncements && <Button type="link"
+                                                icon={<PlusCircleOutlined/>}
+                                                size={'large'}
+                                                onClick={() => setCreateAnnouncements(false)}>
                     Создать анонс турнира
-                </Button>
+                </Button>}
                 <br/>
-                <FormAnnouncement/>
+                <FormAnnouncement setCreateAnnouncements={setCreateAnnouncements} createAnnouncements={createAnnouncements}/>
             </div>
             <div className={styleAn.container__lists}>
             </div>
