@@ -1,0 +1,6 @@
+.button__contain {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    margin-left: 10px;
+}

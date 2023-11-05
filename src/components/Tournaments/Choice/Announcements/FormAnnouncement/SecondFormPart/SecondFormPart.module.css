@@ -1,0 +1,11 @@
+.formSecond__contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.selectForm__contain {
+    display: flex;
+    column-gap: 13px;
+}
