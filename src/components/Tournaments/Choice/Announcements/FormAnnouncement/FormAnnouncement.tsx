@@ -58,11 +58,7 @@ export const FormAnnouncement = (props: FormAnnouncementType) => {
             {!props.createAnnouncements && <>
                 {!formCompleted && <>
                     <div className={styleFA.form__container}>
-                        {current === 0 && <FirstFormPart setCreateAnnouncements={props.setCreateAnnouncements}
-                                        createAnnouncements={props.createAnnouncements}
-                                        setCurrent={setCurrent} current={current}
-                                        setFormCompleted={setFormCompleted}
-                                        formCompleted={formCompleted}/>}
+                        {current === 0 && <FirstFormPart/>}
                         {current === 1 && <SecondFormPart/>}
                         <ControlButtons current={current} setCurrent={setCurrent} setFormCompleted={setFormCompleted}
                                         setCreateAnnouncements={props.setCreateAnnouncements}/>
