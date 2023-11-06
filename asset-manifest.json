@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/armProject/static/css/main.7f05e08b.css",
-    "main.js": "/armProject/static/js/main.2fd0f62b.js",
+    "main.css": "/armProject/static/css/main.0b064f9b.css",
+    "main.js": "/armProject/static/js/main.c9fd94fd.js",
     "static/js/787.80d6ba6c.chunk.js": "/armProject/static/js/787.80d6ba6c.chunk.js",
     "static/media/kazakhstan.svg": "/armProject/static/media/kazakhstan.dbb289f099d3034a49aaa7d9860befee.svg",
     "static/media/united_states.svg": "/armProject/static/media/united_states.174d24593c7b606826841385dc27330f.svg",
@@ -13,12 +13,12 @@
     "static/media/sweden.svg": "/armProject/static/media/sweden.2878204ccef9d279c1a076cb0405c261.svg",
     "static/media/ukraine.svg": "/armProject/static/media/ukraine.51b0678ddbbe28795a80246fb1ff2262.svg",
     "index.html": "/armProject/index.html",
-    "main.7f05e08b.css.map": "/armProject/static/css/main.7f05e08b.css.map",
-    "main.2fd0f62b.js.map": "/armProject/static/js/main.2fd0f62b.js.map",
+    "main.0b064f9b.css.map": "/armProject/static/css/main.0b064f9b.css.map",
+    "main.c9fd94fd.js.map": "/armProject/static/js/main.c9fd94fd.js.map",
     "787.80d6ba6c.chunk.js.map": "/armProject/static/js/787.80d6ba6c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7f05e08b.css",
-    "static/js/main.2fd0f62b.js"
+    "static/css/main.0b064f9b.css",
+    "static/js/main.c9fd94fd.js"
   ]
 }
