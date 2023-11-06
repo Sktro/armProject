@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styleFA from "../FormAnnouncement.module.css";
 import {Checkbox, DatePicker, Input, Select, Space} from "antd";
-import {Countries} from "../Countries";
+import {Countries} from "./Countries";
 import {CheckboxChangeEvent} from "antd/es/checkbox";
 import {DatePickerProps, RangePickerProps} from "antd/es/date-picker";
 

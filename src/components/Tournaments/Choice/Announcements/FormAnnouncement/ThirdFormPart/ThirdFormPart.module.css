@@ -1,0 +1,30 @@
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.thirdForm__contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.financeInput__contain {
+    display: flex;
+    column-gap: 10px;
+}
+
+.organizer__contain{
+    display: flex;
+    column-gap: 10px;
+}
+
+.upload__contain {
+    display: flex;
+    column-gap: 10px;
+}

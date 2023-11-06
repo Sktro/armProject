@@ -6,6 +6,7 @@ import {FormCompleted} from "./FormCompleted/FormCompleted";
 import {FormSteps} from "./FormSteps/FormSteps";
 import {ControlButtons} from "./ControlButtons/ControlButtons";
 import {SecondFormPart} from "./SecondFormPart/SecondFormPart";
+import {AppWithThirdFormPart} from "./ThirdFormPart/ThirdFormPart";
 
 
 type FormAnnouncementType = {
@@ -60,6 +61,7 @@ export const FormAnnouncement = (props: FormAnnouncementType) => {
                     <div className={styleFA.form__container}>
                         {current === 0 && <FirstFormPart/>}
                         {current === 1 && <SecondFormPart/>}
+                        {current === 2 && <AppWithThirdFormPart/>}
                         <ControlButtons current={current} setCurrent={setCurrent} setFormCompleted={setFormCompleted}
                                         setCreateAnnouncements={props.setCreateAnnouncements}/>
                     </div>

@@ -2770,6 +2770,11 @@ ansi-styles@^5.0.0:
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-5.2.0.tgz#07449690ad45777d1924ac2abb2fc8895dba836b"
   integrity sha512-Cxwpt2SfTzTtXcfOlzGEee8O+c+MmUgGrNiBcXnuWxuFJHe6a5Hz7qwhwe5OgaSYI0IJvkLqWX1ASG+cJOkEiA==
 
+antd-country-phone-input@^4.5.1:
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/antd-country-phone-input/-/antd-country-phone-input-4.5.1.tgz#bf76b477f5a7c278ec17a943fc70a93e02c4abcc"
+  integrity sha512-gyw069GYII+A7417RS/2k/C/V67ttRnbMLldTtzR1g2x3ZptS3YncA3at4kNqPQiLr0fNXtdnZtW97rmWsb/Aw==
+
 antd@^5.10.2:
   version "5.10.2"
   resolved "https://registry.yarnpkg.com/antd/-/antd-5.10.2.tgz#9b8c72b92f25fef4b93c186358bcba9cd68b94a8"
@@ -10418,6 +10423,11 @@ workbox-window@6.6.1:
   dependencies:
     "@types/trusted-types" "^2.0.2"
     workbox-core "6.6.1"
+
+world_countries_lists@^2.8.2:
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/world_countries_lists/-/world_countries_lists-2.8.2.tgz#0729e73335004007dbf7e1422ac1dea3c5ca4681"
+  integrity sha512-zfVaEpHy6BVktcmsOQz1VQWFGgxczhZZwQlUZ1XanMiW69g+25Y7c1RbhzEA3GjKRq8J3XN+RbLkupZ0vJnN5Q==
 
 wrap-ansi@^7.0.0:
   version "7.0.0"

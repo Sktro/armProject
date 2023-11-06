@@ -22,8 +22,6 @@ export const SecondFormPart = () => {
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-
-
     const showModal = () => {
         setIsModalOpen(true);
     };
@@ -107,7 +105,6 @@ export const SecondFormPart = () => {
 
     };
 
-
     const sortedValues = [...valueWeightsSelect].sort((a, b) => {
         if (a === 'абс') return -1;
         if (b === 'абс') return 1;
@@ -118,12 +115,15 @@ export const SecondFormPart = () => {
     console.log(valueWeights)
     console.log(valueStatus)
 
-    return(
+    return (
         <div className={styleSFP.formSecond__contain}>
-            <Segmented options={['Рейтинговый турнир', 'Обычный турнир']} value={valueStatus} onChange={onChangeStatus} />
-            <Modal  title={<span><WarningOutlined style={{color:"#faad14"}} /> Внимание</span>} open={isModalOpen} onOk={handleOk} onCancel={handleCancel} cancelText={'Отмена'} >
+            <Segmented style={{border: "1px solid rgba(255,255,255,0.51)"}} options={['Рейтинговый турнир', 'Обычный турнир']} value={valueStatus}
+                       onChange={onChangeStatus}/>
+            <Modal title={<span><WarningOutlined style={{color: "#faad14"}}/> Внимание</span>} open={isModalOpen}
+                   onOk={handleOk} onCancel={handleCancel} cancelText={'Отмена'}>
 
-                <p>В рейтинговом турнире могут принимать участие только зарегестрированные спортсмены на данной платформе.</p>
+                <p>В рейтинговом турнире могут принимать участие только зарегестрированные спортсмены на данной
+                    платформе.</p>
             </Modal>
             <Radio.Group onChange={onChangeRadio} value={value}>
                 <Radio value={1}>Двоеборье</Radio>
@@ -136,40 +136,40 @@ export const SecondFormPart = () => {
             <div className={styleSFP.selectForm__contain}>
                 <Select
                     placeholder={'Пол'}
-                    style={{ width: 70}}
+                    style={{width: 70}}
                     onChange={handleChangeGender}
                     options={[
-                        { value: 'male', label: 'муж' },
-                        { value: 'female', label: 'жен' },
+                        {value: 'male', label: 'муж'},
+                        {value: 'female', label: 'жен'},
                     ]}
                 />
                 <Select
                     placeholder={'Возраст'}
-                    style={{ width: 110}}
+                    style={{width: 110}}
                     onChange={handleChangeAdults}
                     options={[
-                        { value: 'adults', label: 'Взрослые' },
-                        { value: '14-15', label: '14-15' },
-                        { value: '16-18', label: '16-18' },
-                        { value: '19-21', label: '19-21' },
-                        { value: '22+', label: '22+' },
-                        { value: '40+', label: '40+' },
-                        { value: '50+', label: '50+' },
-                        { value: '60+', label: '60+' },
+                        {value: 'adults', label: 'Взрослые'},
+                        {value: '14-15', label: '14-15'},
+                        {value: '16-18', label: '16-18'},
+                        {value: '19-21', label: '19-21'},
+                        {value: '22+', label: '22+'},
+                        {value: '40+', label: '40+'},
+                        {value: '50+', label: '50+'},
+                        {value: '60+', label: '60+'},
                     ]}
                 />
                 <Select
                     placeholder={'Категория'}
-                    style={{ width: 160}}
+                    style={{width: 160}}
                     onChange={handleChangeCategory}
                     options={[
-                        { value: 'common', label: 'Общая' },
-                        { value: 'amateurs', label: 'Любители' },
-                        { value: 'professionals', label: 'Профессионалы' },
-                        { value: 'disabledPeople', label: 'Инвалиды' },
-                        { value: 'disabledPeople(VIS)', label: 'Инвалиды(VIS)' },
-                        { value: 'disabledPeople(STAND)', label: 'Инвалиды(STAND)' },
-                        { value: 'disabledPeople(SIT)', label: 'Инвалиды(SIT)' },
+                        {value: 'common', label: 'Общая'},
+                        {value: 'amateurs', label: 'Любители'},
+                        {value: 'professionals', label: 'Профессионалы'},
+                        {value: 'disabledPeople', label: 'Инвалиды'},
+                        {value: 'disabledPeople(VIS)', label: 'Инвалиды(VIS)'},
+                        {value: 'disabledPeople(STAND)', label: 'Инвалиды(STAND)'},
+                        {value: 'disabledPeople(SIT)', label: 'Инвалиды(SIT)'},
 
                     ]}
                 />
@@ -186,8 +186,7 @@ export const SecondFormPart = () => {
                 />
             </Space>
             <Button onClick={handleAcceptButton}>Добавить</Button>
-            <br/>
-            <div>{valueWeights.map((w, index)=> <div key={index}>{w}</div>)}</div>
+            <div>{valueWeights.map((w, index) => <div key={index}>{w}</div>)}</div>
         </div>
 
     )
