@@ -65,7 +65,7 @@ export const ThirdFormPart = () => {
                     <Input style={{width: "130px"}} type={'number'} placeholder="Телефон" prefix={<PhoneOutlined/>}/>
                 </div>
                 <Input style={{width: "340px"}} addonBefore="http://" placeholder={"Ссылка на соц. сети"}/>
-                <TextArea showCount maxLength={150} onChange={onChangeTextAria} placeholder="Дополнительные сведения" />
+                <TextArea style={{width: "340px"}} showCount maxLength={150} onChange={onChangeTextAria} placeholder="Дополнительные сведения" />
                 <div className={stilesTFP.upload__contain}>
                     <Upload {...props}>
                         <Button icon={<UploadOutlined/>}>Добавить афишу</Button>

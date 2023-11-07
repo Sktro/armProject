@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import {Header} from "./components/Layout/header/Header";
 import {MainContent} from "./components/mainContent/MainContent";
 import {Coaches} from "./components/Coaсhes/Coaches";

@@ -52,7 +52,6 @@ export const Header = () => {
                             <StyledNavLink to='coaches'>Тренера</StyledNavLink>
                         </div>
                         <div className={stylesH.header__authorization}>
-                            <span>|</span>
                             <Space wrap>
                                 <Select
                                     size={"small"}
@@ -65,8 +64,8 @@ export const Header = () => {
                                     ]}
                                 />
                             </Space>
-                            <Button type="link" size='large'>sing in</Button>
-                            <Button ghost>Login</Button>
+                            <Button type="link" size='large'>войти</Button>
+                            <Button ghost>Регистрация</Button>
                         </div>
 
                     </div>

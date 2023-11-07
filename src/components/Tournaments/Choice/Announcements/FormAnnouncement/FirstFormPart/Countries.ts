@@ -1,4 +1,9 @@
-export const Countries = [
+export type CountriesType = {
+    value: string
+    label: string
+}
+
+export const Countries: CountriesType[] = [
     {
         value: 'RU',
         label: 'Russia',
