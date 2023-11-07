@@ -3,15 +3,16 @@
 }
 .header__row {
     display: flex;
-    column-gap: 30px;
+    flex-wrap: wrap;
+    column-gap: 10px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .header__logo {
     display: flex;
     align-items: center;
-    column-gap: 7px;
+    column-gap: 5px;
 }
 
 .header__logo span {
@@ -24,7 +25,7 @@
 
 .header__nav {
     display: flex;
-    column-gap: 40px;
+    column-gap: 20px;
     align-items: center;
     color: white;
     font-family: ABeeZee, sans-serif;
@@ -32,6 +33,11 @@
     font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.9px;
+}
+
+.header__authorization {
+    display: flex;
+    align-items: center;
 }
 
 .buttonLogin {

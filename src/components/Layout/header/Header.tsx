@@ -50,6 +50,8 @@ export const Header = () => {
                             <StyledNavLink to='rating'>Рейтинги</StyledNavLink>
                             <StyledNavLink to='tournaments'>Турниры</StyledNavLink>
                             <StyledNavLink to='coaches'>Тренера</StyledNavLink>
+                        </div>
+                        <div className={stylesH.header__authorization}>
                             <span>|</span>
                             <Space wrap>
                                 <Select
@@ -66,6 +68,7 @@ export const Header = () => {
                             <Button type="link" size='large'>sing in</Button>
                             <Button ghost>Login</Button>
                         </div>
+
                     </div>
                 </div>
             </ConfigProvider>

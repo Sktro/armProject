@@ -6,6 +6,9 @@
 .main__row {
     display: flex;
     column-gap: 30px;
+    row-gap: 30px;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 

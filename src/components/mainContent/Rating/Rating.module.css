@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 460px;
-    height: 540px;
+    min-width: 350px;
+    height: 530px;
     border: 1px white solid;
     border-radius: 25px;
 }
@@ -14,7 +14,7 @@
 
 .text {
     color: white;
-    padding: 13px 0 13px 0;
+    padding: 10px 0 10px 0;
     font-size: 26px;
     line-height: 45px;
     letter-spacing: 1px;
@@ -22,11 +22,12 @@
 
 .container__athlete {
     display: flex;
-    width: 405px;
-    justify-content: space-between;
+    width: 100%;
     color: #FFF;
+    column-gap: 10px;
+    justify-content:space-between ;
     font-family: Yanone Kaffeesatz, sans-serif;
-    font-size: 22px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 45px; /* 173.077% */
@@ -35,7 +36,7 @@
 }
 
 .index{
-    width: 30px;
+    width: 18px;
 }
 
 .fullName {
