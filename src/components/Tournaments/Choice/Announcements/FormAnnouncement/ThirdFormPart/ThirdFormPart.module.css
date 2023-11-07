@@ -27,4 +27,15 @@ input[type="number"] {
 .upload__contain {
     display: flex;
     column-gap: 10px;
+    padding-top: 10px;
+}
+
+@media (max-width: 600px) {
+    .upload__contain {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    .upload__contain {
+        padding-top: 0;
+    }
 }

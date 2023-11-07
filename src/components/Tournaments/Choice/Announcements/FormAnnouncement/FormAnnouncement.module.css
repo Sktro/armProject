@@ -8,6 +8,14 @@
     justify-content: center;
 }
 
+@media (max-width: 600px) {
+    /* Стили для экранов шириной менее 600 пикселей */
+    .form__container {
+        flex-direction: column;
+        row-gap: 15px;
+    }
+}
+
 .form {
     display: flex;
     flex-wrap: wrap;

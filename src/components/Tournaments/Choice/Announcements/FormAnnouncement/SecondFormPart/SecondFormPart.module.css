@@ -9,3 +9,9 @@
     display: flex;
     column-gap: 13px;
 }
+
+@media (max-width: 600px) {
+    .selectForm__contain {
+        column-gap: 5px;
+    }
+}
