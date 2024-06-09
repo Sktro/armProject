@@ -1,0 +1,111 @@
+.container__registration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 50px;
+    row-gap: 40px;
+    flex-wrap: wrap;
+}
+
+.container__fullName {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    column-gap: 10px;
+    justify-content: center;
+}
+
+.container__personalData {
+    display: flex;
+    column-gap: 10px;
+    flex-direction: column;
+}
+
+.container__info {
+    justify-content: center;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.container__location {
+    justify-content: center;
+    column-gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container__data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.twoStepContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.switchStepTwoContainer {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-weight: bold;
+}
+
+
+.twoStepButtonContainer {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.threeStepContainer {
+    margin-bottom: 50px;
+}
+
+.switchStepThreeContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dateAndGender {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.stepThreeInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    font-weight: normal;
+    text-wrap: revert;
+    margin-top: 10px;
+    font-size: 16px;
+    color: darkorange;
+}
+
+.organizerContain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
