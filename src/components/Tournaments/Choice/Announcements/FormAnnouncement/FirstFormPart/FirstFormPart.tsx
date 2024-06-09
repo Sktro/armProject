@@ -1,30 +1,37 @@
-import React, {useState} from "react";
+import React from "react";
 import styleFA from "../FormAnnouncement.module.css";
 import {Checkbox, DatePicker, Input, Select, Space} from "antd";
 import {Countries} from "./Countries";
 import {CheckboxChangeEvent} from "antd/es/checkbox";
 import {DatePickerProps, RangePickerProps} from "antd/es/date-picker";
 
+type FirstFormPartType = {
+    setCountry: (value: string) => void
+    setNameTournament: (value: string) => void
+    seAddressTournament: (value: string) => void
+    setPreRegistration: (value: boolean) => void
+    setLinkForm: (value: string) => void
+    setDateTournament: (value: [string, string] | string) => void
+    preRegistration: boolean
+    setWeighingDate: (value: [string, string] | string) => void
+}
 
-
-export const FirstFormPart = () => {
-
-    const [check, setCheck] = useState<boolean>(false)
+export const FirstFormPart = (props: FirstFormPartType) => {
 
     const onChangeCheckbox = (e: CheckboxChangeEvent) => {
-        setCheck(e.target.checked)
-        console.log(`checked = ${e.target.checked}`);
+        props.setPreRegistration(e.target.checked)
     };
-    console.log(check)
+
     const {RangePicker} = DatePicker;
 
 
-    const onChangeDateWeighings = (
+    const onChangeWeighingDate = (
         value: DatePickerProps['value'] | RangePickerProps['value'],
         dateString: [string, string] | string,
     ) => {
-        console.log('Selected Time: ', value);
-        console.log('Formatted Selected Time: ', dateString);
+        props.setWeighingDate(dateString)
+        /*console.log('Selected Time: ', value);
+        console.log('Formatted Selected Time: ', dateString);*/
     };
 
     const onOkWeighings = (value: DatePickerProps['value'] | RangePickerProps['value']) => {
@@ -36,27 +43,28 @@ export const FirstFormPart = () => {
         value: DatePickerProps['value'] | RangePickerProps['value'],
         dateString: [string, string] | string,
     ) => {
-        console.log('Selected Time: ', value);
-        console.log('Formatted Selected Time: ', dateString);
+        props.setDateTournament(dateString)
+        /*console.log('Selected Time: ', value);
+        console.log('Formatted Selected Time: ', dateString);*/
     };
     const onOkTournament = (value: DatePickerProps['value'] | RangePickerProps['value']) => {
         console.log('onOk: ', value);
     };
 
     const onChangeNameTournament = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
+        props.setNameTournament(e.target.value);
     };
 
     const onChangeNameAddress = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
+        props.seAddressTournament(e.target.value)
     };
 
     const onChangeLink = (e: React.ChangeEvent<HTMLInputElement>) => {
-        console.log(e);
+        props.setLinkForm(e.target.value)
     };
 
-    const onChange = (value: string) => {
-        console.log(`selected ${value}`);
+    const onChangeCountry = (value: string) => {
+        props.setCountry(value)
     };
 
     const onSearch = (value: string) => {
@@ -74,7 +82,7 @@ export const FirstFormPart = () => {
                                     showSearch
                                     placeholder="Страна"
                                     optionFilterProp="children"
-                                    onChange={onChange}
+                                    onChange={onChangeCountry}
                                     onSearch={onSearch}
                                     filterOption={filterOption}
                                     options={Countries}
@@ -95,7 +103,7 @@ export const FirstFormPart = () => {
                                     style={{alignItems: "center", padding: '5px 0 5px 0', justifyContent: "center"}}
                                     onChange={onChangeCheckbox}>Предварительная
                                     регистрация</Checkbox>
-                                {check &&
+                                {props.preRegistration &&
                                     <div className={styleFA.input__container}>
                                         <Input placeholder="Ссылка на регистрацию"
                                                allowClear
@@ -114,7 +122,7 @@ export const FirstFormPart = () => {
                                         placeholder={["Взвешивание, начало", "Окончание"]}
                                         showTime={{format: 'HH:mm'}}
                                         format="YYYY-MM-DD HH:mm"
-                                        onChange={onChangeDateWeighings}
+                                        onChange={onChangeWeighingDate}
                                         onOk={onOkWeighings}
                                     />
                                 </Space>

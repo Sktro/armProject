@@ -11,10 +11,15 @@ import {
 import type {SelectProps} from 'antd';
 import styleSFP from "./SecondFormPart.module.css"
 import {WarningOutlined} from "@ant-design/icons";
+import {StatusTournamentType} from "../../../../../../Typing/TypeFormForAnnouncement";
 
-export const SecondFormPart = () => {
+type SecondFormPartType = {
+    setStatusTournament: (value: StatusTournamentType) => void
+    statusTournament: StatusTournamentType
+}
 
-    const [valueStatus, setValueStatus] = useState<string | number>('');
+export const SecondFormPart = (props: SecondFormPartType) => {
+
     const [value, setValue] = useState(1);
     const [valueWeightsSelect, setValueWeightsSelect] = useState<string[]>([])
     const [valueWeights, setValueWeights] = useState<string[]>([])
@@ -32,11 +37,11 @@ export const SecondFormPart = () => {
 
     const handleCancel = () => {
         setIsModalOpen(false);
-        setValueStatus('Обычный турнир')
+        props.setStatusTournament('Обычный турнир')
     };
 
-    const onChangeStatus = (value: string | number) => {
-        setValueStatus(value)
+    const onChangeStatus = (value: StatusTournamentType) => {
+        props.setStatusTournament(value)
         if (value === 'Рейтинговый турнир') {
             showModal()
         }
@@ -111,13 +116,10 @@ export const SecondFormPart = () => {
         return Number(a) - Number(b);
     });
 
-    console.log(valueWeightsSelect)
-    console.log(valueWeights)
-    console.log(valueStatus)
-
     return (
         <div className={styleSFP.formSecond__contain}>
-            <Segmented style={{border: "1px solid rgba(255,255,255,0.51)"}} options={['Рейтинговый турнир', 'Обычный турнир']} value={valueStatus}
+            <Segmented style={{border: "1px solid rgba(255,255,255,0.51)"}}
+                       options={['Рейтинговый турнир', 'Обычный турнир']} value={props.statusTournament}
                        onChange={onChangeStatus}/>
             <Modal title={<span><WarningOutlined style={{color: "#faad14"}}/> Внимание</span>} open={isModalOpen}
                    onOk={handleOk} onCancel={handleCancel} cancelText={'Отмена'}>

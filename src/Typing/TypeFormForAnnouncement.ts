@@ -1,6 +1,6 @@
 import {CountriesType} from "../components/Tournaments/Choice/Announcements/FormAnnouncement/FirstFormPart/Countries";
 
-export type StatusTournamentType = 'Рейтинговый турнир' | 'Обычный турнир'
+export type StatusTournamentType = 'Рейтинговый турнир' | 'Обычный турнир' | ''
 export type ConductionSystemType = 'Двоеборье' | 'Правая рука' | 'Левая рука'
 export type GenderType = 'муж'|'жен'
 export type AgeType =
@@ -41,8 +41,8 @@ export type FormForAnnouncementType = [
         addressTournament?: string
         preRegistration: boolean
         linkToRegistration: string
-        startTournament: string
-        weighingTime: string
+        startTournament: [string, string] | string
+        weighingTime: [string, string] | string
         status: StatusTournamentType
         categories: CategoryType
         entryFee?: number

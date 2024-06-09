@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import {ConfigProvider,} from 'antd';
 import styleFA from './FormAnnouncement.module.css'
 import {FirstFormPart} from "./FirstFormPart/FirstFormPart";
 import {FormCompleted} from "./FormCompleted/FormCompleted";
@@ -7,6 +6,7 @@ import {FormSteps} from "./FormSteps/FormSteps";
 import {ControlButtons} from "./ControlButtons/ControlButtons";
 import {SecondFormPart} from "./SecondFormPart/SecondFormPart";
 import {AppWithThirdFormPart} from "./ThirdFormPart/ThirdFormPart";
+import {StatusTournamentType} from "../../../../../Typing/TypeFormForAnnouncement";
 
 
 type FormAnnouncementType = {
@@ -16,53 +16,39 @@ type FormAnnouncementType = {
 
 export const FormAnnouncement = (props: FormAnnouncementType) => {
 
-    const [formCompleted, setFormCompleted] = useState<boolean>(false)
-    const [current, setCurrent] = useState<number>(0)
+    const [formCompleted, setFormCompleted] = useState<boolean>(false) // смена формы на положительный результат
+    const [current, setCurrent] = useState<number>(0) // шаг по форме 0-1-2
+    const [country, setCountry] = useState<string>('') // Выбор страны
+    const [nameTournament, setNameTournament] = useState<string>('') // Наименование турнира
+    const [addressTournament, seAddressTournament] = useState<string>('') // Адрес турнира
+    const [preRegistration, setPreRegistration] = useState<boolean>(false) // чек-бокс на предварительную регистрацию
+    const [linkForm, setLinkForm] = useState<string>('') // форма на предварительную регистрацию
+    const[dateTournament, setDateTournament] = useState<[string, string] | string>('') // вермя начала турнира
+    const [weighingDate, setWeighingDate] = useState<[string, string] | string>('') // дата начала - окончания взвешивания
+    const [statusTournament, setStatusTournament] = useState<StatusTournamentType>('')
 
 
     return (
-        <ConfigProvider
-            theme={{
-                components: {
-                    Select: {
-                        selectorBg: 'rgba(255,255,255,0)',
-                        optionSelectedColor: "#fff",
-                        optionSelectedBg: "#46464f",
-                    },
-                    Input: {
-                        activeBg: "rgba(0,0,0,0)",
-                    },
-                    Button: {
-                        primaryShadow: "rgba(255,255,255,0.51)"
-                    },
-                    Segmented: {
-                        itemSelectedBg: "rgba(255,255,255,0.51)",
-                        itemSelectedColor: "rgb(0,0,0)",
-                        itemHoverColor:  "rgba(255,255,255,0.51)",
-                        itemHoverBg: "rgba(255,255,255,0.09)",
-                        itemColor: "rgba(255,255,255,0.51)",
-                    },
-                },
-                token: {
-                    colorBgLayout: "rgb(38,38,43)",
-                    colorSplit: "rgba(255,255,255,0.51)",
-                    colorBgContainer: "rgba(0,0,0,0)",
-                    colorText: "#fff",
-                    colorBgElevated: "rgb(56,56,63)",
-                    colorTextPlaceholder: "rgba(255,255,255,0.51)",
-                    colorBorder: "rgba(255,255,255,0.51)",
-                    colorTextQuaternary: 'rgba(255,255,255,0.51)',
-                    colorTextTertiary: 'rgba(255,255,255,0.86)',
-                    controlItemBgActive: 'rgba(255,255,255,0.38)',
-                },
-            }}>
+
+        <>
+
             {!props.createAnnouncements && <>
                 {!formCompleted && <>
                     <div className={styleFA.form__container}>
-                        {current === 0 && <FirstFormPart/>}
-                        {current === 1 && <SecondFormPart/>}
+                        {current === 0 && <FirstFormPart setCountry={setCountry}
+                                                         setNameTournament={setNameTournament}
+                                                         seAddressTournament={seAddressTournament}
+                                                         preRegistration={preRegistration}
+                                                         setLinkForm={setLinkForm}
+                                                         setWeighingDate={setWeighingDate}
+                                                         setDateTournament={setDateTournament}
+                                                         setPreRegistration={setPreRegistration}/>}
+                        {current === 1 && <SecondFormPart setStatusTournament={setStatusTournament}
+                                                          statusTournament={statusTournament}/>}
                         {current === 2 && <AppWithThirdFormPart/>}
-                        <ControlButtons current={current} setCurrent={setCurrent} setFormCompleted={setFormCompleted}
+                        <ControlButtons current={current}
+                                        setCurrent={setCurrent}
+                                        setFormCompleted={setFormCompleted}
                                         setCreateAnnouncements={props.setCreateAnnouncements}/>
                     </div>
                     <FormSteps current={current}/>
@@ -73,7 +59,6 @@ export const FormAnnouncement = (props: FormAnnouncementType) => {
             {formCompleted && <FormCompleted setFormCompleted={setFormCompleted}
                                              setCurrent={setCurrent}
                                              setCreateAnnouncements={props.setCreateAnnouncements}/>}
-
-        </ConfigProvider>
+        </>
     )
 }

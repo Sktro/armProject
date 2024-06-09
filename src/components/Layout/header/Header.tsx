@@ -21,6 +21,20 @@ const StyledNavLink = styled(NavLink)`
   }
 `;
 
+const StyledRegistrationButton = styled(NavLink)`
+  border: 1px solid white;
+  border-radius: 6px;
+  padding: 6px;
+  color: white;
+  font-family: Roboto ,sans-serif;
+  font-size: 14px;
+
+  &:hover {
+    border: 1px solid #4096ff;
+    color: #4096ff;
+  }
+`;
+
 export const Header = () => {
     return (
         <header className={stylesH.header}>
@@ -64,8 +78,8 @@ export const Header = () => {
                                     ]}
                                 />
                             </Space>
-                            <Button type="link" size='large'>войти</Button>
-                            <Button ghost>Регистрация</Button>
+                            <Button style={{fontFamily:"Roboto, sans-serif"}} type="link" size='large'>войти</Button>
+                            <StyledRegistrationButton to='registration'>Регистрация</StyledRegistrationButton>
                         </div>
 
                     </div>
