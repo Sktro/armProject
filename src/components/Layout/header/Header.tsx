@@ -2,9 +2,15 @@ import React from "react";
 import stylesH from "./Header.module.css"
 import '../../../Styles/common.css'
 import logoImg from '../../../img/logo.svg'
-import {NavLink} from "react-router-dom";
-import {Button, Space, Select, ConfigProvider} from 'antd';
+import {Link, NavLink} from "react-router-dom";
+import {Space, Select, ConfigProvider, Badge, Avatar, Dropdown, MenuProps} from 'antd';
 import styled from 'styled-components';
+
+
+type HeaderType = {
+    loggedIn: boolean
+    setLoggedIn: (value: boolean) => void
+}
 
 
 const StyledNavLink = styled(NavLink)`
@@ -26,7 +32,7 @@ const StyledRegistrationButton = styled(NavLink)`
   border-radius: 6px;
   padding: 6px;
   color: white;
-  font-family: Roboto ,sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: 14px;
 
   &:hover {
@@ -35,7 +41,27 @@ const StyledRegistrationButton = styled(NavLink)`
   }
 `;
 
-export const Header = () => {
+export const Header = (props: HeaderType) => {
+
+    const items: MenuProps['items'] = [
+        {
+            key: '1',
+            label: (
+                <Link to={'profile'}>
+                    Мой профиль
+                </Link>
+            ),
+        },
+        {
+            key: '2',
+            danger: true,
+            label: (<Link to={'/'} onClick={()=> props.setLoggedIn(false)}>
+                    Выход
+                </Link>
+            ),
+        },
+    ];
+
     return (
         <header className={stylesH.header}>
             <ConfigProvider
@@ -78,8 +104,20 @@ export const Header = () => {
                                     ]}
                                 />
                             </Space>
-                            <Button style={{fontFamily:"Roboto, sans-serif"}} type="link" size='large'>войти</Button>
-                            <StyledRegistrationButton to='registration'>Регистрация</StyledRegistrationButton>
+                            {!props.loggedIn &&
+                                <>
+                                    <StyledNavLink to={"login"} style={{fontFamily: "Roboto, sans-serif"}}
+                                                   type="link">войти</StyledNavLink>
+                                    <StyledRegistrationButton to='registration'>Регистрация</StyledRegistrationButton>
+                                </>
+                            }
+                            {props.loggedIn &&
+                                <Dropdown menu={{items}} className={stylesH.linkProfile}>
+                                    <Badge dot>
+                                        Artem Petrov <Avatar shape="circle" size="large">A</Avatar>
+                                    </Badge>
+                                </Dropdown>
+                            }
                         </div>
 
                     </div>

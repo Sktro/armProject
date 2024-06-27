@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Header} from "./components/Layout/header/Header";
 import {MainContent} from "./components/mainContent/MainContent";
 import {Coaches} from "./components/Coaсhes/Coaches";
@@ -12,8 +12,14 @@ import {Results} from "./components/Tournaments/Choice/Results/Results";
 import {User} from "./components/Users/User";
 import {Registration} from "./components/Registration/Registration";
 import {ConfigProvider} from "antd";
+import {Login} from "./components/Login/Login";
+import {Recovery} from "./components/Recovery/Recovery";
+import {Profile} from "./components/Profile/Profile";
 
 function App() {
+
+    const [loggedIn, setLoggedIn] = useState<boolean>(false)
+
     return (
         <>
             <ConfigProvider
@@ -51,11 +57,15 @@ function App() {
                         controlItemBgActive: 'rgba(255,255,255,0.38)',
                     },
                 }}>
-            <Header/>
+            <Header loggedIn={loggedIn} setLoggedIn={setLoggedIn}/>
             <Routes>
                 <Route path='/' element={<MainContent/>}/>
+                <Route path='login/*' element={<Login setLoggedIn={setLoggedIn}/>}/>
+                <Route path='recovery' element={<Recovery/>}/>
                 <Route path='registration' element={<Registration/>}/>
                 <Route path='rating' element={<Rating/>}/>
+                <Route path='profile' element={<Profile/>}/>
+
                 <Route path='users' element={<User/>}/>
                 <Route path='tournaments/*' element={<Tournaments/>}>
                     <Route path="announcements" element={<Announcements/>}/>

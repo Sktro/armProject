@@ -44,11 +44,19 @@
 
 .header__authorization {
     display: flex;
+    width: 230px;
     align-items: center;
+    margin-top:5px;
+    justify-content: space-between;
 }
 
 .buttonLogin {
     border: 1px white solid;
     padding: 6.5px 23px 6.5px 23px;
     border-radius: 10px;
+}
+
+.linkProfile:hover {
+    background-color: rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
 }

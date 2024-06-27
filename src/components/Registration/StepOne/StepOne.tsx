@@ -6,15 +6,6 @@ import styleReg from "../Registration.module.css";
 export const StepOne = () => {
     return (
         <div className={styleReg.container__fullName}>
-            <Form.Item required label="Имя" name="firstName">
-                <Input/>
-            </Form.Item>
-            <Form.Item required label="Фамилия" name="lastName">
-                <Input/>
-            </Form.Item>
-            <Form.Item label="Отчество" name="middleName">
-                <Input/>
-            </Form.Item>
             <Form.Item name={['user', 'email']} label="Email" rules={[{ type: 'email' }]} required>
                 <Input />
             </Form.Item>

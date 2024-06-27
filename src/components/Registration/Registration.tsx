@@ -1,15 +1,10 @@
-import React, {useState} from "react";
+import React from "react";
 import styleReg from "./Registration.module.css"
-import {Button, Form, Steps} from "antd";
+import {Button, Form} from "antd";
 import {StepOne} from "./StepOne/StepOne";
-import {StepTwo} from "./StepTwo/StepTwo";
-import {UnorderedListOutlined, UserAddOutlined, UserSwitchOutlined} from "@ant-design/icons";
-import {StepThree} from "./StepThree/StepThree";
 
 
 export const Registration = () => {
-
-    const [current, setCurrent] = useState<number>(0)
 
     return (
         <div className="container">
@@ -17,16 +12,14 @@ export const Registration = () => {
             <div className={styleReg.container__registration}>
                 РЕГИСТРАЦИЯ
                 <Form layout="vertical">
-                    {current === 0 && <>
                         <StepOne/>
                         <div className={styleReg.button}>
                             <Form.Item>
-                                <Button onClick={() => setCurrent(1)}>Продолжить регистрацию</Button>
+                                <Button>Зарегистрироваться</Button>
                             </Form.Item>
                         </div>
-                    </>}
 
-                    {current === 1 &&
+                    {/*{current === 1 &&
                         <div className={styleReg.twoStepContainer}>
                             <StepTwo/>
                             <div className={styleReg.twoStepButtonContainer}>
@@ -46,11 +39,11 @@ export const Registration = () => {
                             </div>
 
                         </div>
-                    }
+                    }*/}
                 </Form>
 
             </div>
-            <Steps
+           {/* <Steps
                 current={current}
                 items={[
                     {
@@ -66,7 +59,7 @@ export const Registration = () => {
                         icon: <UserAddOutlined />
                     },
                 ]}
-            />
+            />*/}
         </div>
     )
 }
